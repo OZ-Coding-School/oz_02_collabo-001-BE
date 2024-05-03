@@ -56,7 +56,7 @@ ROOT_URLCONF = 'planpeak.urls'
 import os
 
 TEMPLATES = [
-     {
+    {
          'BACKEND': 'django.template.backends.django.DjangoTemplates',
          'DIRS': [os.path.join(BASE_DIR, 'mail', 'templates')],
         'APP_DIRS': True,
