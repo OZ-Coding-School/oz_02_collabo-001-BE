@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dbset.apps.DbsetConfig',
-    'mail'
+    'mail',
+    'Login',
+    
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,5 @@ EMAIL_HOST_USER = 'planpeak001@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+AUTH_USER_MODEL = 'Login.user'
