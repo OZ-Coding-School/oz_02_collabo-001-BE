@@ -37,11 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'users',
-=======
-    'dbset.apps.DbsetConfig',
->>>>>>> bd3d42d (table write)
 ]
 
 MIDDLEWARE = [
@@ -80,8 +76,12 @@ WSGI_APPLICATION = 'planpeak.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'planpeakdb',
+        'USER': 'user',
+        'PASSWORD': 'plan123!',
+        'HOST': 'db-muths-kr.vpc-pub-cdb.ntruss.com',
+        'PORT': '3306',
     }
 }
 
