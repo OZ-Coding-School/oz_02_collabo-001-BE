@@ -15,5 +15,5 @@ class MEMBER(models.Model):
     mem_job = models.CharField(max_length=255)
     
     class Meta:
-        db_table = 'dbser_member'
+        db_table = 'dbset_member'
         managed = False
