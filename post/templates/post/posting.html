@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting!</title>
+</head>
+<body>
+    <h1>게시글 개별 페이지입니다</h1>
+        
+    <!-- <p>{{post.met_request_id}}</p> -->
+    {% if meet.re_image %}
+        <img src = "{{ meet.re_image.url }}" alt="" height="300">
+        <br>
+    {% endif %}
+    <p>{{meet.re_category}}</p>
+    <p>{{meet.re_title}}</p>
+    <p>{{meet.re_meetbrief}}</p>
+    
+    <p>{{meet.re_content}}</p>
+    <p>{{meet.re_supplies}}</p>
+    <p>{{meet.preparation_materials}}</p>
+    
+    <p>{{meet.insta_url}}</p>
+    <p>{{meet.youtub_url}}</p>
+    <p>{{meet.et_url}}</p>
+    <p>{{meet.regular_activity}}</p>
+    <p>{{meet.date_of_meeting}}</p>
+    <p>{{meet.online_offline}}</p>
+    <p>{{meet.business_area}}</p>
+    <p>{{meet.mbr_age}}</p>
+    <p>{{meet.mbr_num}}</p>
+    <p>{{meet.mbr_content}}</p>
+    
+    <p>{{meet.sel_method}}</p>
+    
+    <p>{{meet.re_challenge}}</p>
+
+    <p>{{meet.participation_check}}</p>
+    <p>{{meet.participation_fee}}</p>
+    <p>{{meet.re_bank}}</p>
+    <p>{{meet.deposit_account}}</p>
+    <p>{{meet.refund_content}}</p>
+
+    <!-- <p>{{meet.end_of_positing}}</p> -->
+    
+    <!-- <p>{{meet.created_at}}</p> -->
+    <!-- <p>{{meet.modified_at}}</p> -->
+    <a href="/planpeak/post/global_search/">목록</a>
+    <a href="/planpeak/post/{{meet.pk}}/content_delete">삭제</a>
+
+</body>
+</html>
