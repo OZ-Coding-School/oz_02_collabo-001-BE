@@ -34,11 +34,19 @@
     
     <p>선발 : {{meet.pick_method}}</p>
 
-
-    <!-- <h2>Survey Information</h2>
-    <p>Survey 1: {{ survey.su_survey1 }}</p>
-    <p>Survey 2: {{ survey.su_survey2 }}</p> -->
-    
+    {% if surveys %}
+        <ul>
+        {% for survey in surveys %}
+            <li>
+                <p>{{ survey.su_survey }}</p>
+                <!-- <p>{{ survey.su_answer }}</p> -->
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No surveys available.</p>
+    {% endif %}
+        
     <p>챌리지 : {{meet.re_challenge}}</p>
 
     <p>참가비 : {{meet.re_payment}}</p>
