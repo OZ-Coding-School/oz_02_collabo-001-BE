@@ -87,6 +87,14 @@ def new_post(request):
                 # created_at=request.POST['created_at'],
                 # modified_at=request.POST['modified_at'],
             )
+
+        # 설문
+        for i in range(1, 16):
+            survey = request.POST.get(f'survey{i}', '')
+            if survey:  # survey가 존재할 경우에만 저장
+                MET_SURVEY.objects.create(su_survey=survey)
+            # MET_SURVEY.objects.create(su_survey=survey)
+
         posting.save()
         return redirect('/planpeak/post/global_search')
     return render(request, 'post/new_post.html')
