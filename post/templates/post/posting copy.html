@@ -13,35 +13,39 @@
         <img src = "{{ meet.re_image.url }}" alt="" height="300">
         <br>
     {% endif %}
-    <p>카테고리 : {{meet.re_category}}</p>
-    <p>모임 이름 : {{meet.re_title}}</p>
-    <p>한줄소개 : {{meet.re_meetbrief}}</p>
+    <p>{{meet.re_category}}</p>
+    <p>{{meet.re_title}}</p>
+    <p>{{meet.re_meetbrief}}</p>
     
-    <p>모임소개 : {{meet.content}}</p>
-    <p>제공 : {{meet.re_supplies}}</p>
-    <p>준비물 : {{meet.preparation_materials}}</p>
-    <p>프로세스 : {{meet.process}}</p>
+    <p>{{meet.re_content}}</p>
+    <p>{{meet.re_supplies}}</p>
+    <p>{{meet.preparation_materials}}</p>
     
-    <p>링크 : {{meet.out_links}}</p>
-
-    <p>활동 : {{meet.regular_activity}}</p>
-    <p>시간 : {{meet.schedule}}</p>
-    <p>장소 : {{meet.address}}</p>
-
-    <p>연령대 : {{meet.mbr_age}}</p>
-    <p>인원 : {{meet.mbr_num}}</p>
-    <p>멤버 모집 : {{meet.mbr_content}}</p>
+    <p>{{meet.insta_url}}</p>
+    <p>{{meet.youtub_url}}</p>
+    <p>{{meet.et_url}}</p>
+    <p>{{meet.regular_activity}}</p>
+    <p>{{meet.date_of_meeting}}</p>
+    <p>{{meet.online_offline}}</p>
+    <p>{{meet.business_area}}</p>
+    <p>{{meet.mbr_age}}</p>
+    <p>{{meet.mbr_num}}</p>
+    <p>{{meet.mbr_content}}</p>
     
-    <p>선발 : {{meet.pick_method}}</p>
+    <p>{{meet.sel_method}}</p>
 
 
     <!-- <h2>Survey Information</h2>
     <p>Survey 1: {{ survey.su_survey1 }}</p>
     <p>Survey 2: {{ survey.su_survey2 }}</p> -->
     
-    <p>챌리지 : {{meet.re_challenge}}</p>
+    <p>{{meet.re_challenge}}</p>
 
-    <p>참가비 : {{meet.re_payment}}</p>
+    <p>{{meet.participation_check}}</p>
+    <p>{{meet.participation_fee}}</p>
+    <p>{{meet.re_bank}}</p>
+    <p>{{meet.deposit_account}}</p>
+    <p>{{meet.refund_content}}</p>
 
     <!-- <p>{{meet.end_of_positing}}</p> -->
     

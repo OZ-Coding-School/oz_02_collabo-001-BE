@@ -32,18 +32,18 @@ class MET_REQUEST(models.Model):
     re_category = models.CharField(max_length=10)
     re_title = models.CharField(max_length=255)
     re_meetbrief = models.CharField(max_length=255)
-    content = models.TextField(null=True)
+    content = models.TextField(null=True) # re_content
     re_supplies = models.CharField(max_length=255, null=True)
     preparation_materials = models.TextField(null=True)
-    process = models.CharField(max_length=255, null=True)
-    out_links = models.TextField(null=True)
+    process = models.TextField(max_length=255, null=True) # proc_title, proc_time, proc_content
+    out_links = models.TextField(null=True) # insta_url, youtub_url, et_url
     regular_activity = models.CharField(max_length=10, null=True)
-    date_of_meeting = models.TextField(null=True)
-    address = models.CharField(max_length=255, null=True) 
+    schedule = models.TextField(null=True) # date_of_meeting
+    address = models.TextField(max_length=255, null=True) # online_offline, business_area
     mbr_age = models.CharField(max_length=10, null=True)
     mbr_num = models.CharField(max_length=10, null=True)
     mbr_content = models.TextField(null=True)
-    pick_method = models.CharField(max_length=50, null=True)
+    pick_method = models.CharField(max_length=50, null=True) # sel_method
     re_challenge = models.CharField(max_length=10, null=True)
     re_payment = models.TextField(null=True) # participation_check, participation_fee, re_bank, deposit_account, refund_content
     end_of_positing = models.IntegerField(null=True)
