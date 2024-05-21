@@ -1,8 +1,9 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
-class MEMBER(models.Model):
+class MEMBER(AbstractUser):
     member_id = models.AutoField(primary_key=True)
+    mem_password = models.CharField(max_length=128)
     mem_email = models.CharField(max_length=255, null=False)
     mem_name = models.CharField(max_length=255, null=False)
     mem_imgUrl = models.TextField()
@@ -10,9 +11,11 @@ class MEMBER(models.Model):
     phone_number = models.CharField(max_length=20, null=False)
     created_at = models.DateTimeField(auto_now_add=True, null=False)
     modified_at = models.DateTimeField(auto_now=True, null=False)
-    mem_age = models.IntegerField()
+    mem_age = models.IntegerField(blank=True, null=True)
     mem_gender = models.CharField(max_length=50)
     mem_job = models.CharField(max_length=255)
+    mem_consent = models.IntegerField(null=True)
+    mem_marketing = models.IntegerField(null=True)
     
 class MET_ROLE(models.Model):
     mem_role_id = models.IntegerField()
@@ -106,6 +109,7 @@ class ALM_MESSAGE(models.Model):
     
 class MET_SURVEY(models.Model):
     met_survey_id = models.AutoField(primary_key=True)
+    meet = models.ForeignKey(MET_REQUEST, on_delete=models.CASCADE, null=True)
     post_id = models.ForeignKey(MET_ROLE, on_delete=models.CASCADE, null=False)
     member_id = models.ForeignKey(MEMBER, on_delete=models.CASCADE, null=False)
     su_survey = models.TextField()
