@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dbset',
+    'dbset.apps.DbsetConfig',
     'login',
 ]
 
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'planpeak.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'planpeakdb',
+        'USER': 'user',
+        'PASSWORD': 'plan123!',
+        'HOST': 'db-muths-kr.vpc-pub-cdb.ntruss.com',
+        'PORT': '3306',
     }
 }
 
@@ -123,3 +127,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'dbset.MEMBER'
+
+import os
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
