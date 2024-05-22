@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'planpeak.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'planpeakdb',
+        'NAME': 'planpeak',
         'USER': 'user',
         'PASSWORD': 'plan123!',
-        'HOST': 'db-muths-kr.vpc-pub-cdb.ntruss.com',
+        'HOST': 'db-n4a58-kr.vpc-pub-cdb.ntruss.com',
         'PORT': '3306',
     }
 }
